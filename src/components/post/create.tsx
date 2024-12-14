@@ -1,21 +1,21 @@
 "user client";
 import { addQuery } from "@/app/actions/AddQuery";
-import {
-  Label,
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@radix-ui/react-select";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { Label } from "@radix-ui/react-dropdown-menu";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+} from "@radix-ui/react-select";
 
 const fileTypes = ["JPG", "JPEG", "PNG", "GIF"];
 const CreatePostComponent = (prop: any) => {
@@ -103,14 +103,12 @@ const CreatePostComponent = (prop: any) => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Lâm Đồng</SelectLabel>
                     <SelectItem value="1">TP Đà Lạt</SelectItem>
                     <SelectItem value="apple">Đức Trọng</SelectItem>
                     <SelectItem value="banana">Lâm Hà</SelectItem>
                     <SelectItem value="blueberry">Di Linh</SelectItem>
                     <SelectItem value="grapes">Bảo Lộc</SelectItem>
                     <SelectItem value="pineapple">Bảo Lâm</SelectItem>
-                    <SelectLabel>Tỉnh khác</SelectLabel>
                     <SelectItem value="apple">TP Hồ Chí Minh</SelectItem>
                     <SelectItem value="apple">TP Hà Nội</SelectItem>
                     <SelectItem value="apple">Tỉnh khác</SelectItem>
